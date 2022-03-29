@@ -16,6 +16,10 @@ target 'MyWebView' do
 
   pod 'react-native-cameraroll', :path => '../node_modules/@react-native-community/cameraroll'
 
+  pod 'RNRectangleScanner', :path => '../node_modules/react-native-rectangle-scanner'
+
+  pod 'react-native-orientation', :path => '../node_modules/react-native-orientation'
+
   target 'MyWebViewTests' do
     inherit! :complete
     # Pods for testing
