@@ -1,5 +1,5 @@
 rootProject.name = 'MyWebView'
-include ':react-native-orientation'
+include ':react-native-orientation', ':app'
 project(':react-native-orientation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-orientation/android')
 include ':react-native-rectangle-scanner'
 project(':react-native-rectangle-scanner').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rectangle-scanner/android')

@@ -21,7 +21,8 @@ export function useOrientation(): 'PORTRAIT' | 'LANDSCAPE' {
   );
 
   useEffect(() => {
-    const callback = () => setOrientation(isPortrait() ? 'PORTRAIT' : 'LANDSCAPE');
+    const callback = () =>
+      setOrientation(isPortrait() ? 'PORTRAIT' : 'LANDSCAPE');
 
     Dimensions.addEventListener('change', callback);
 
