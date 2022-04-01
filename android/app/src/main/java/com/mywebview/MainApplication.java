@@ -2,6 +2,8 @@ package com.mywebview;
 
 import android.app.Application;
 import android.content.Context;
+import android.webkit.WebView;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.github.yamill.orientation.OrientationPackage;
@@ -49,6 +51,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    WebView.setWebContentsDebuggingEnabled(true);
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }

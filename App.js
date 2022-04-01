@@ -1,19 +1,16 @@
-import React, {Component} from 'react';
-
+import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import MyWebView from './src/component/MyWebView';
 import MyCameraView from './src/component/MyCameraView';
-
-const Tab = createBottomTabNavigator();
-
+import {createStackNavigator} from '@react-navigation/stack';
+const Stack = createStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator initialRouteName="WebView">
-        <Tab.Screen name="WebView" component={MyWebView} />
-        <Tab.Screen name="CameraView" component={MyCameraView} />
-      </Tab.Navigator>
+      <Stack.Navigator initialRouteName="WebView">
+        <Stack.Screen name="WebView" component={MyWebView} />
+        <Stack.Screen name="CameraView" component={MyCameraView} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
